@@ -13,6 +13,17 @@ const getText = (path) => {
   });
 };
 
-getText('./content/first.txt')
-  .then(result => console.log(result))
-  .catch(err => console.log(err));
+// getText('./content/first.txt')
+//   .then(result => console.log(result))
+//   .catch(err => console.log(err));
+
+const start = async () => {  
+  try {
+    const firstFile = await getText('./content/first.txt');
+    console.log(firstFile);
+  } catch (err) {
+    console.log(err);
+  }
+}; 
+
+start();

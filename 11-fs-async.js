@@ -1,4 +1,5 @@
 const fs = require('fs');
+console.log('start');
 
 fs.readFile('./content/first.txt', 'utf8', (err, result) => {
   if(err) {
@@ -23,8 +24,10 @@ fs.readFile('./content/first.txt', 'utf8', (err, result) => {
           console.log(err.message);
           return;
         }
-        console.log(result);
+        console.log('done with this task');
+
       }
     );
   });
 });
+console.log('starting new task');
